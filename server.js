@@ -31,6 +31,9 @@ mongoose.connect("mongodb://localhost/mongoScraper", {
   useMongoClient: true
 });
 
+// Depending if you are doing a local host or heroku this depends on the switch
+// mongoose.connect("mongodb://heroku_qklsgtbh:1ve7j2b8kaftm428vs89fadnol@ds113746.mlab.com:13746/heroku_qklsgtbh");
+
 // requiring routes
 var routes = require("./controllers/controllers.js");
 app.use("/", routes);
