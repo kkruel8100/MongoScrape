@@ -72,17 +72,24 @@ app.get("/articles", function(req, res) {
 
 // Route for posting saves Articles to the db
 app.post("/save", function(req, res) {
-  console.log(req.body);
-  db.Article
-    .create(req.body)
-    .then(function(dbArticle) {
-      // If we were able to successfully scrape and save an Article, send a message to the client
-      return res.send("Add Complete");
-    })
-    .catch(function(err) {
-      // If an error occurred, send it to the client
-      return res.json(err);
-    });
+
+  db.Article.find({ title: req.body.title }, function(err, docs) {
+    if (!docs.length) {
+      db.Article
+        .create(req.body)
+        .then(function(dbArticle) {
+          // If we were able to successfully scrape and save an Article, send a message to the client
+          return res.send("Add Complete");
+        })
+        .catch(function(err) {
+          // If an error occurred, send it to the client
+          return res.json(err);
+        });
+
+    } else {
+      console.log("Article exists.");
+    }
+  });
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note
