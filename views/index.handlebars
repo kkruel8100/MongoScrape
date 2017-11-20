@@ -1,15 +1,18 @@
 <div class="row">
-    <div class="col-md-12 text-center">
-        <h1>Mongo Scraper</h1>
-        <p>Stack Overflow Questions</p>  
-        <a href="#"><button class="btn btn-default navbarBtn" id="homeButton">Home</button></a>
-        <button onclick="window.location='/saved';" class="btn btn-default navbarBtn" id="saveButton">Saved</button>
-        <button class="btn btn-default navbarBtn" id="scrapeButton">Scrape</button>
-    </div>
+  <div id="wrapper" class="col-md-12 text-center">
+    <h2>Mongo Scraper</h2>
+    <h3>New York Times Technology</h3> 
+
+  <div>
+    <button type="button" class="btn btn-info">Home</button>
+    <button type="button" id="saveArticles" class="btn btn-info">Saved Articles</button>
+    <button type="button" id="scrapeArticles" class="btn btn-info">Scrape New Articles!</button>
+  </div>
+  <div id="articles"></div>
+	<div id="notes"></div>
 </div>
+    
 
  
       
 
-<div id="articles" style="top:20px"></div>
-<div id="notes"></div>
