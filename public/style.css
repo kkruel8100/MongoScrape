@@ -48,24 +48,38 @@ a:hover {
   text-decoration: none;
 }
 
+.deleteArt,
+.notesBtn {
+  margin: 2% 2% 0 2%;
+}
+
 #notes {
   float: right;
   width: 30%;
+  margin-right: 10%;
+  margin-top: 2%;
 }
 
 textarea,
 input {
   display: block;
   width: 100%;
-  background-color: #FCF5C7;
+  background-color: #d1d1d1;
+  padding: 2%;
 }
 
 input {
   height: 36px;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 textarea {
   height: 200px;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+#savenote,
+#deletenote {
+  margin-top: 4%;
+  padding: .375rem .75rem;
 }
