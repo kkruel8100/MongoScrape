@@ -38,6 +38,14 @@ mongoose.connect("mongodb://localhost/mongoScraper", {
 var routes = require("./controllers/controllers.js");
 app.use("/", routes);
 
+var db = mongoose.connection;
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
+
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
