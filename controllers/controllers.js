@@ -12,14 +12,14 @@ var index = require("./../models/index.js");
 var app = express();
 
 // Require all models
-var db = require("../models");
+// var db = require("../models");
 
 // Heroku deployment
 
-// var mongojs = require("mongojs");
-// const databaseUrl = "mongodb://heroku_qklsgtbh:1ve7j2b8kaftm428vs89fadnol@ds113746.mlab.com:13746/heroku_qklsgtbh";
-// const collections = ["Article"];
-// const db = mongojs(databaseUrl, collections);
+var mongojs = require("mongojs");
+var databaseUrl = "mongodb://heroku_qklsgtbh:1ve7j2b8kaftm428vs89fadnol@ds113746.mlab.com:13746/heroku_qklsgtbh";
+var collections = ["Article", "Note"];
+var db = mongojs(databaseUrl, collections);
 
 
 // Main route (simple Hello World Message)
