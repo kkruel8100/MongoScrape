@@ -14,6 +14,14 @@ var app = express();
 // Require all models
 var db = require("../models");
 
+// Heroku deployment
+
+// var mongojs = require("mongojs");
+// const databaseUrl = "mongodb://heroku_qklsgtbh:1ve7j2b8kaftm428vs89fadnol@ds113746.mlab.com:13746/heroku_qklsgtbh";
+// const collections = ["Article"];
+// const db = mongojs(databaseUrl, collections);
+
+
 // Main route (simple Hello World Message)
 app.get("/", function(req, res) {
   res.render("index", {
