@@ -31,9 +31,9 @@ app.use("/", routes);
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 
-// var MONGOLAB_URI = "mongodb://heroku_v3c3frrw:rhi62l1qaevohl3qdrdiihadt5@ds115396.mlab.com:15396/heroku_v3c3frrw";
+var MONGOLAB_URI = "mongodb://heroku_v3c3frrw:rhi62l1qaevohl3qdrdiihadt5@ds115396.mlab.com:15396/heroku_v3c3frrw";
 
-// var MONGODB_URI = process.env.MONGOLAB_URI || "mongodb://localhost/mongoScraper";
+var MONGODB_URI = process.env.MONGOLAB_URI || "mongodb://localhost/mongoScraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // mongoose.connect("mongodb://localhost/mongoScraper", {
@@ -41,9 +41,8 @@ mongoose.Promise = Promise;
 // });
 
 // Depending if you are doing a local host or heroku this depends on the switch
-mongoose.connect(process.env.
-  "mongodb://heroku_v3c3frrw:rhi62l1qaevohl3qdrdiihadt5@ds115396.mlab.com:15396/heroku_v3c3frrw");
-// mongoose.connect(MONGODB_URI);
+
+mongoose.connect(MONGODB_URI);
 
 var db = mongoose.connection;
 db.on("error", function(error) {
