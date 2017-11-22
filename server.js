@@ -41,7 +41,7 @@ var MONGODB_URI = process.env.MONGOLAB_URI || "mongodb://localhost/mongoScraper"
 // });
 
 // Depending if you are doing a local host or heroku this depends on the switch
-// mongoose.connect("mongodb://heroku_qklsgtbh:1ve7j2b8kaftm428vs89fadnol@ds113746.mlab.com:13746/heroku_qklsgtbh");
+
 mongoose.connect(MONGODB_URI);
 
 var db = mongoose.connection;
