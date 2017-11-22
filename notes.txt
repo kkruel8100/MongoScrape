@@ -1,0 +1,15 @@
+Heroku Notes:
+
+https://radiant-escarpment-51895.herokuapp.com/
+
+
+MONGODB_URI: mongodb://heroku_v3c3frrw:rhi62l1qaevohl3qdrdiihadt5@ds115396.mlab.com:15396/heroku_v3c3frrw
+
+Git Hub:
+Server.js 
+lines 39-41 uncommented
+lines 34-36, 44, 45 commented out
+
+Flip for Heroku Deployment
+
+lines 34, 36, 45 uncommented

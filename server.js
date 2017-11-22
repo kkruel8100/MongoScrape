@@ -31,7 +31,7 @@ app.use("/", routes);
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 
-var MONGOLAB_URI = "mongodb://username_test:test@ds113746.mlab.com:13746/heroku_qklsgtbh";
+var MONGOLAB_URI = "mongodb://heroku_v3c3frrw:rhi62l1qaevohl3qdrdiihadt5@ds115396.mlab.com:15396/heroku_v3c3frrw";
 
 var MONGODB_URI = process.env.MONGOLAB_URI || "mongodb://localhost/mongoScraper";
 
